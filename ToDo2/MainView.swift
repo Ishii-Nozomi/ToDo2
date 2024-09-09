@@ -6,19 +6,23 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct MainView: View {
-    @State var taskData: [Model] = []
+    @EnvironmentObject var viewModel: ViewModel
     var body: some View {
         
         VStack {
             NavigationStack {
                 List {
-                    ForEach(taskData) { taskData in
-                        Text(taskData.text)
+                    ForEach(viewModel.todoItems.freeze()) { item in
+                        Text(item.text)
                     }
                     .onDelete(perform: { indexSet in
-                        remove(offsets: indexSet)
+                        if let index = indexSet.first {
+                            // ViewModelには、removeTODOItem メソッドを作成予定
+                            viewModel.removeTODOItem(viewModel.todoItems[index].id)
+                        }
                     })
                     .swipeActions(edge: .leading, allowsFullSwipe: false) {
                         NavigationLink {
@@ -43,12 +47,11 @@ struct MainView: View {
             
         }
     }
-    func remove(offsets: IndexSet) {
-        taskData.remove(atOffsets: offsets)
-    }
+    
     
 }
 
 #Preview {
     MainView()
+        .environmentObject(ViewModel())
 }

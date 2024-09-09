@@ -13,6 +13,9 @@
 		C803A7862C7B41FC00C55292 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C803A7852C7B41FC00C55292 /* Preview Assets.xcassets */; };
 		C803A78D2C7B428A00C55292 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C803A78C2C7B428A00C55292 /* MainView.swift */; };
 		C803A78F2C7B493500C55292 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C803A78E2C7B493500C55292 /* DetailView.swift */; };
+		C899A0332C8EAB920069F3C2 /* CreateTODOItemCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C899A0322C8EAB920069F3C2 /* CreateTODOItemCommand.swift */; };
+		C8DC58DC2C85A0DF0019A9FB /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC58DB2C85A0DF0019A9FB /* ToDoItem.swift */; };
+		C8DC58DE2C85ADE30019A9FB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC58DD2C85ADE30019A9FB /* ViewModel.swift */; };
 		C8DC78372C7DC257009A55F2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DC78362C7DC257009A55F2 /* Model.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		C803A7852C7B41FC00C55292 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C803A78C2C7B428A00C55292 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C803A78E2C7B493500C55292 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C899A0322C8EAB920069F3C2 /* CreateTODOItemCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTODOItemCommand.swift; sourceTree = "<group>"; };
+		C8DC58DB2C85A0DF0019A9FB /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		C8DC58DD2C85ADE30019A9FB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C8DC78362C7DC257009A55F2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +80,9 @@
 				C803A78C2C7B428A00C55292 /* MainView.swift */,
 				C803A78E2C7B493500C55292 /* DetailView.swift */,
 				C8DC78362C7DC257009A55F2 /* Model.swift */,
+				C8DC58DB2C85A0DF0019A9FB /* ToDoItem.swift */,
+				C8DC58DD2C85ADE30019A9FB /* ViewModel.swift */,
+				C899A0322C8EAB920069F3C2 /* CreateTODOItemCommand.swift */,
 				C803A7822C7B41FC00C55292 /* Assets.xcassets */,
 				C803A7842C7B41FC00C55292 /* Preview Content */,
 			);
@@ -94,7 +103,6 @@
 				BB983338472782490AE5CED2 /* Pods-ToDo2.debug.xcconfig */,
 				A931DE3D65511D6AA03B48B7 /* Pods-ToDo2.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,8 +221,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C803A78D2C7B428A00C55292 /* MainView.swift in Sources */,
+				C899A0332C8EAB920069F3C2 /* CreateTODOItemCommand.swift in Sources */,
 				C803A78F2C7B493500C55292 /* DetailView.swift in Sources */,
+				C8DC58DC2C85A0DF0019A9FB /* ToDoItem.swift in Sources */,
 				C803A77F2C7B41FB00C55292 /* ToDo2App.swift in Sources */,
+				C8DC58DE2C85ADE30019A9FB /* ViewModel.swift in Sources */,
 				C8DC78372C7DC257009A55F2 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +363,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ToDo2/Preview Content\"";
 				DEVELOPMENT_TEAM = A576YFG6SP;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -382,6 +394,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ToDo2/Preview Content\"";
 				DEVELOPMENT_TEAM = A576YFG6SP;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

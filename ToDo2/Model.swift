@@ -6,10 +6,29 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Model: Identifiable {
-    var id: ObjectIdentifier
+class Model: ObservableObject {
+    var config: Realm.Configuration
     
-    var text: String
+    init() {
+        config = Realm.Configuration()
+    }
     
+    var realm: Realm {
+        return try! Realm(configuration: config)
+    }
+    
+    // 保存されている ToDoItem を Results<ToDoItem> として返す
+    var taskData: Results<ToDoItem> {
+        realm.objects(ToDoItem.self)
+    }
+    
+    func executeCommand(_ command: TODOModelCommand) {
+        command.execute(self)
+    }
+    
+    func itemFromID(_ id: ToDoItem.ID) -> ToDoItem? {
+        taskData.first(where: {$0.id == id})
+    }
 }
